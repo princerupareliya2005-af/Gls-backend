@@ -6,14 +6,14 @@ on:
 
 jobs:
   build-and-test:
-    runs-on: ubuntu latest
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
         node-version: [18.x,20.x,22.x]
 
     steps:
-    - name: Checkout Repository
+    - name: Checkout repository
       uses: actions/checkout@v4
 
     - name: Set up Node.js ${{matrix.node-version}}
